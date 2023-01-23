@@ -2,12 +2,42 @@
 /* Custom Properties */
 /* ----------------- */
 :root {
-
+  /* colors */
+  /* light-mode */
+  --clr-white: #FFFFFF;
+  --clr-off-white: #FAFAFA;
+  --clr-gray: #EBEBEB;
+  --clr-black: #151515;
+  /* box shadow */
+  --box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.19856);
+/* 
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weights - 400 (reg), 700 (bold)
+*/
+  --ff-heading: 'Lora', Georgia, serif;
+  --ff-body: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  /* font sizes, weights, line-heights*/
+  /* 32px */
+  --fs-700: 2rem;
+  /* 24px (h3)*/
+  --fs-600: 1.5rem;
+  /* 20px */
+  --fs-500: 1.25rem;
+  /* Body - 16px */
+  --fs-400: 1rem;
+  /* 14px */
+  --fs-350: 0.875rem;
+  /* 12px */
+  --fs-300: 0.75rem
+  /* font weights */
+  --fw-700: 700;
+  --fw-400: 400;
 }
 
 @media (min-width: 40em) {
   :root {
-     
+     /* 40px */
+     --fs-700: 2.5rem;
   }
 }
 
@@ -55,3 +85,40 @@ textarea,
 select {
   font: inherit;
 }
+
+/* Utility classes */
+.flex { display: flex; }
+.grid { display: grid; }
+
+
+/* General Styles */
+
+body {
+  margin: 0;
+  padding: 0 1.5em;
+  font-family: var(--ff-body);
+  text-align: left;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 40em) {
+  .logo {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+
+
+
+
