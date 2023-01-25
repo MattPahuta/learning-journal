@@ -91,18 +91,25 @@ select {
 body {
   margin: 0;
   padding: 0;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+
   font-family: var(--ff-primary);
   font-size: var(--fs-400);
   text-align: left;
   line-height: 1.5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
   background-color: var(--clr-white);
   color: var(--clr-black);
 }
 
 /* Typography */
+.fw-700 { font-weight: 700; }
+.fw-400 { font-weight: 400; }
+
 h1, h2, h4 {
   line-height: 1.1;
 }
@@ -129,7 +136,7 @@ h2 {
 
 /* Header Styles */
 .page-header {
-  padding: 1.125em 1.75em;
+  padding: 1rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -191,10 +198,47 @@ h2 {
 }
 
 
-/* Blog Grid Section */
-.blogs {
+/* Blog Posts Grid Section */
+.posts {
   padding: 2em 1.25em;
+  display: grid;
+  place-items: center;
 }
+
+.posts-grid {
+  padding-bottom: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.posts-grid article {
+  display: grid;
+  gap: 1em;
+}
+
+.post-image {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 2 / 1.25;
+}
+
+.post-date,
+.post-title {
+  margin-bottom: 9px;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 2em;
+  color: var(--clr-white);
+  background: var(--clr-black);
+  font-size: var(--fs-300);
+  text-align: center;
+}
+
+
 
 @media (min-width: 40em) {
   .logo {
