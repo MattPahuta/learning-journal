@@ -8,6 +8,7 @@ const blogData = [
     imageAlt: `computer screen showing React code`,
     bodyHtml: '',
     id: 1,
+    isDisplayed: true,
   },
   {
     date: 'July 13, 2022',
@@ -17,6 +18,7 @@ const blogData = [
     imageAlt: `laptop showing quote about design`,
     bodyHtml: '',
     id: 2,
+    isDisplayed: true,
   },
   {
     date: 'July 3, 2022',
@@ -26,6 +28,7 @@ const blogData = [
     imageAlt: `woman walking on the beach`,
     bodyHtml: '',
     id: 3,
+    isDisplayed: true,
   },
   {
     date: 'June 23, 2022',
@@ -35,6 +38,7 @@ const blogData = [
     imageAlt: `a person's hand holding a light bulb`,
     bodyHtml: '',
     id: 4,
+    isDisplayed: false,
   },
   {
     date: 'June 13, 2022',
@@ -44,6 +48,7 @@ const blogData = [
     imageAlt: `abstract pattern and colors`,
     bodyHtml: '',
     id: 5,
+    isDisplayed: false,
   },
   {
     date: 'June 3, 2022',
@@ -53,5 +58,8 @@ const blogData = [
     imageAlt: `a laptop showing lines of code`,
     bodyHtml: '',
     id: 6,
+    isDisplayed: false,
   },
 ]
+
+export default blogData
