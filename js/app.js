@@ -5,53 +5,23 @@ const loadPostsBtn = document.querySelector('#load-posts');
 
 loadPostsBtn.addEventListener('click', () => {
   console.log('loading more posts...')
-  console.log(blogData)
-  // generatePostPreviewHtml(blogData)
+  console.log(blogData) // debug
   render()
 })
 
 // give me three more posts
-function getThreePosts(blogData) {
-  // run on page load?
-  // use slice to get 3 posts
-  // flip isDisplayed to true (in calling function?)
-
-  // *** with filter (sort of?)
-  // const threePreviews = blogData.filter(blogObj => {
-  //   if (!blogObj.isDisplayed) {
-  //     blogObj.isDisplayed = true;
-  //     return blogObj;
-  //   }
-  // }).slice(0, 3)
-  // return threePreviews;
-
-  // ***with forEach
-  const threePosts = [];
-  blogData.forEach(post => {
-    if (!post.isDisplayed) {
-      post.isDisplayed = true;
-      threePosts.push(post);
+function getThreePosts(blogPosts) {
+  const postsToDisplay = [];
+  for (let i = 0; i < 3; i++) { // try to get a max of 3 posts
+    if (blogPosts.length) { // check there are posts remaining
+      let post = blogPosts.shift()
+      postsToDisplay.push(post)
+    } else {
+      console.log('End of posts...')
     }
-  }) 
-  return threePosts.slice(0,3)
-
-  // *** with for of loop
-  // const justThree = [];
-  // for (let i = 0; i < blogData.length; i++) {
-  //   if (!blogData[i].isDisplayed) {
-  //     justThree.push(blogData[i])
-  //     blogData[i].isDisplayed = true;
-  //   }
-  // }
-
-  // return justThree.slice(0,3)
-
-
-}
-
-// a function to flip the isDisplayed to true
-function handleDisplayedFlag(posts) {
-
+  }
+  console.log(postsToDisplay)
+  return postsToDisplay;
 }
 
 
@@ -78,7 +48,8 @@ function generatePostPreviewHtml(posts) { // takes an array of posts
 // render the post previews to the page
 function render() {
   const postsGrid = document.querySelector('#posts-grid');
-
   postsGrid.innerHTML += generatePostPreviewHtml(getThreePosts(blogData))
 
 }
+
+render()
