@@ -28,11 +28,13 @@
 
   <main>
     <section class="hero">
-      <article class="hero-post">
-        <p class="post-date">July 23, 2022</p>
-        <h2 class="post-title">My new journey as a bootcamp student</h2>
-        <p class="post-preview">After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
-      </article>
+      <a href="post.html" class="post-link">
+        <article class="hero-post">
+          <p class="post-date">July 23, 2022</p>
+          <h2 class="post-title">My new journey as a bootcamp student</h2>
+          <p class="post-preview">After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
+        </article>
+      </a>
     </section>
 
     <div class="wrapper">
@@ -96,7 +98,10 @@
         </div>
 
         <!-- view more link -->
-        <button id="load-posts" class="btn">View More</button>
+        <div class="btn-container">
+          <button id="load-posts" class="btn">View More</button>
+        </div>
+        
       </section>
     </div>
   </main>
