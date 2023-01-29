@@ -30,7 +30,7 @@ This is a multi-page responsive website built from a Scrimba design file. The pr
 
 ### Screenshot
 
-![]()
+![](./assets/project-ss.png)
 
 
 ### Links
@@ -46,7 +46,7 @@ This is a multi-page responsive website built from a Scrimba design file. The pr
 - CSS custom properties
 - Flexbox
 - CSS Grid
-
+- JavaScript
 
 ## Author
 

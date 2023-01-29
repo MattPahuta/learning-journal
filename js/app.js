@@ -1,8 +1,8 @@
 // import blog data
 import { blogData, featuredPost } from '../js/data.js'
-const postsGrid = document.querySelector('#posts-grid');
-const loadPostsBtn = document.querySelector('#load-posts'); // View more posts button
 
+const heroPost = document.getElementById('hero-post'); // get the hero-post article 
+const loadPostsBtn = document.querySelector('#load-posts'); // View more posts button
 
 // give me three more posts
 function getThreePosts(blogPosts) {
@@ -15,34 +15,29 @@ function getThreePosts(blogPosts) {
       console.log('End of posts...')
     }
   }
-  console.log(postsToDisplay)
   return postsToDisplay;
 }
 
-
 // generate the post preview html
-function generatePostPreviewHtml(posts) { // takes an array of posts
+function generatePostPreviewHtml(posts) { 
   let blogFeedHtml = ``
-
   for (const post of posts) {
     blogFeedHtml += `
     <article id="blog-post-${post.id}" class="blog-post">
-      <a href="post.html" id="post-link-${post.id}" class="post-link">
       <img src=${post.imageUrl} alt=${post.imageAlt} class="post-image">
       <div>
         <p class="post-date">${post.date}</p>
         <h3 class="post-title">${post.title}</h3>
         <p class="post-preview">${post.preview}.</p>
       </div>
-      </a>
     </article>
     `
   }
   return blogFeedHtml;
-
 }
 
 // generate full post html
+// * Future enhancement - generate post page html based on clicked article
 function generatePostHtml(post) {
   postHtml = `
   <div class="post-intro">
@@ -54,9 +49,7 @@ function generatePostHtml(post) {
   <div id="post-content" class="post-content">${post.bodyHtml}</div>
   `
   return postHtml;
-
 }
-
 
 // render the post previews to the page
 function render() {
@@ -66,24 +59,13 @@ function render() {
 
 // Event listeners
 loadPostsBtn.addEventListener('click', () => {
-  console.log('loading more posts...')
-  console.log(blogData) // debug
   render()
+  loadPostsBtn.classList.add('hidden')
 })
 
-const blogPosts = document.querySelectorAll('.blog-post');
-blogPosts.forEach(blogPost => {
-  blogPost.addEventListener('click', console.log('article clicked'))
+heroPost.addEventListener('click', () => {
+  location.assign('post.html')
 })
-
 
 render()
 
-// postsGrid.addEventListener('click', (e) => {
-//   console.log(e.target)
-// })
-// const postDate = document.getElementById('post-date');
-// const postTitle = document.getElementById('post-title');
-// const postPreview = document.getElementById('post-preview');
-// const postImg = document.getElementById('post-img');
-// const postContent = document.getElementById('post-content');
