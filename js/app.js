@@ -1,8 +1,16 @@
 // import blog data
-import { blogData, featuredPost } from '../js/data.js'
+import { blogData } from '../js/data.js'
 
+const nav = document.getElementById('nav');
+const navToggle = document.getElementById('nav-toggle');
 const heroPost = document.getElementById('hero-post'); // get the hero-post article 
 const loadPostsBtn = document.querySelector('#load-posts'); // View more posts button
+
+// handle nav hamburger menu
+navToggle.addEventListener('click', () => {
+  console.log('clicked');
+  nav.classList.toggle('nav-visible');
+})
 
 // give me three more posts
 function getThreePosts(blogPosts) {
@@ -12,7 +20,7 @@ function getThreePosts(blogPosts) {
       let post = blogPosts.shift()
       postsToDisplay.push(post)
     } else {
-      console.log('End of posts...')
+      console.log('End of posts...') // debug
     }
   }
   return postsToDisplay;

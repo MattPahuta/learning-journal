@@ -1,17 +1,17 @@
-export const featuredPost = {
-  date: 'May 23, 2022',
-  title: 'My new journey as a bootcamp student',
-  preview: `After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.`,
-  imageUrl: './assets/hero-image.webp',
-  imageAlt: `Laptop computer on desk`,
-  bodyHtml: `
-    <h3 class="post-subtitle">How I stay committed to learning</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consequuntur ratione beatae totam modi cum nesciunt at, voluptatibus illum atque vitae deserunt eos, consequatur quas distinctio, quaerat rem quo quos.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatem laudantium quibusdam quidem beatae iste, aliquid cupiditate aperiam maxime, aliquam veniam dicta enim ipsam dolor. Quo ex laboriosam libero commodi?</p>
-    <h3 class="post-subtitle">How I got started</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corrupti quis exercitationem. Esse, est incidunt. Sed sequi at nihil facere magni eius doloribus asperiores voluptatibus dolor ratione dolorem, distinctio ipsum.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore exercitationem ea temporibus impedit amet, illo incidunt! A itaque, ad alias recusandae sequi accusantium enim facere, vitae ipsum dolorem et possimus?</p>`,
-}
+// export const featuredPost = {
+//   date: 'May 23, 2022',
+//   title: 'My new journey as a bootcamp student',
+//   preview: `After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.`,
+//   imageUrl: './assets/hero-image.webp',
+//   imageAlt: `Laptop computer on desk`,
+//   bodyHtml: `
+//     <h3 class="post-subtitle">How I stay committed to learning</h3>
+//     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit consequuntur ratione beatae totam modi cum nesciunt at, voluptatibus illum atque vitae deserunt eos, consequatur quas distinctio, quaerat rem quo quos.</p>
+//     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatem laudantium quibusdam quidem beatae iste, aliquid cupiditate aperiam maxime, aliquam veniam dicta enim ipsam dolor. Quo ex laboriosam libero commodi?</p>
+//     <h3 class="post-subtitle">How I got started</h3>
+//     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corrupti quis exercitationem. Esse, est incidunt. Sed sequi at nihil facere magni eius doloribus asperiores voluptatibus dolor ratione dolorem, distinctio ipsum.</p>
+//     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore exercitationem ea temporibus impedit amet, illo incidunt! A itaque, ad alias recusandae sequi accusantium enim facere, vitae ipsum dolorem et possimus?</p>`,
+// }
 
 export const blogData = [
   {
